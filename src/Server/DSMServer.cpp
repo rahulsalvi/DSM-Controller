@@ -21,6 +21,9 @@ dsm::Server::Server(uint8_t serverID) : Base("server"+std::to_string(serverID)),
         _multicastPortOffsets[i] = 0;
     }
 
+    asio::ip::multicast::hops option(4);
+    _senderSocket.set_option(option);
+
     LOG(_logger, logger::severityLevel::startup) << "CONSTRUCTED SERVER";
 }
 
