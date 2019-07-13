@@ -1,3 +1,4 @@
 [submodule "src/Dependencies/Log"]
 	path = src/Dependencies/Log
     url = https://github.com/rahulsalvi/Log.git
+	branch = old
